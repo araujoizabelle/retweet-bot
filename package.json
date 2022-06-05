@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./dist/ && npm run tsc --project",
+    "start": "ts-node ./src/index.ts",
+    "postinstall": "npm run tsc",
+    "watch": "tsc -p tsconfig.json -w"
   },
   "author": "",
   "license": "ISC",
