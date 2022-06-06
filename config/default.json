@@ -1,8 +1,1 @@
-{
-    "Twit": {
-        "consumerKey": "TWIT_CONSUMER_KEY",
-        "consumerSecret": "TWIT_CONSUMER_SECRET",
-        "accessToken": "TWIT_ACCESS_TOKEN",
-        "accessTokenSecret": "TWIT_ACCESS_TOKEN_SECRET"
-    }
-}
+{}
