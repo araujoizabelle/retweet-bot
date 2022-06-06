@@ -1,26 +1,32 @@
 {
-  "name": "bot",
+  "name": "twitterbot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf ./dist/ && npm run tsc --project",
     "start": "ts-node ./src/index.ts",
+    "postinstall": "npm run tsc",
+    "watch": "tsc -p tsconfig.json -w"
   },
-  "author": "",
+  "engines" : {
+    "node": "16.13.0",
+	  "npm": "8.1.2"
+  },
+  "keywords": [],
+  "author": "Ahmed Tarek Hasan",
   "license": "ISC",
   "dependencies": {
-    "@types/config": "0.0.41",
-    "@types/node": "^17.0.39",
-    "@types/twit": "^2.2.30",
-    "config": "^3.3.7",
+    "config": "^3.3.6",
     "inversify": "^6.0.1",
-    "ts-node": "^10.8.1",
-    "twit": "^2.2.11"
-  },
-  "devDependencies": {
-    "typescript": "^4.7.3"
+    "reflect-metadata": "^0.1.13",
+    "twit": "^2.2.11",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4",
+    "@types/config": "^0.0.40",
+    "@types/node": "^16.11.6",
+    "@types/twit": "^2.2.30"
   }
 }
