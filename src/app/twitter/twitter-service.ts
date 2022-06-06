@@ -26,6 +26,9 @@ export class TwitterService implements ITwitterService {
     
     public WatchToFilterStream(params: Twit.Params | undefined): void {
         const stream = this.twit.stream('statuses/filter', params);
+        console.log('////////////////////////')
+        console.log(this.twit)
+        console.log('////////////////////////')
         stream.on('tweet', tweet => {
             this.twit.post('statuses/retweet/:id', {id: tweet.id_str});
         });
